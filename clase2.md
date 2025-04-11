@@ -46,8 +46,8 @@
 # Ejemplo de Diagrama Entidad-Relación (ER)
 
 ## Estructura básica
-```mermaid
-erDiagram
+```mermaid 
+erDiagram 
     /* Entidades (Rectángulos) */
     CLIENTE ||--o{ PEDIDO : "realiza"
     CLIENTE {
