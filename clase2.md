@@ -45,25 +45,17 @@
  
 # Ejemplo de Diagrama Entidad-Relación (ER)
 
-## Estructura básica
+```mermaid
 erDiagram
     CLIENTE ||--o{ PEDIDO : "realiza"
     CLIENTE {
         string DNI PK
         string nombre
-        string teléfono
+        string dirección
     }
-    
-    PEDIDO ||--|{ PRODUCTO : "contiene"
     PEDIDO {
         int id_Pedido PK
         date fecha
-    }
-
-    PRODUCTO {
-        int codigo PK
-        string nombre
-        float precio
     }
 
 ---
