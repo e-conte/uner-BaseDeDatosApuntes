@@ -42,21 +42,6 @@
 - **Relaciones**: Líneas con verbos (ej: "trabaja en").
 - **Atributos**: Elipses.
   - **Atributo identificador**: Subrayado (ej: DNI para "cliente").
- 
-# Ejemplo de Diagrama Entidad-Relación (ER)
-
-```mermaid
-erDiagram
-    CLIENTE ||--o{ PEDIDO : "realiza"
-    CLIENTE {
-        string DNI PK
-        string nombre
-        string dirección
-    }
-    PEDIDO {
-        int id_Pedido PK
-        date fecha
-    }
 
 ---
 
