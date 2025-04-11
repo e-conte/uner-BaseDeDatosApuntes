@@ -42,7 +42,33 @@
 - **Relaciones**: Líneas con verbos (ej: "trabaja en").
 - **Atributos**: Elipses.
   - **Atributo identificador**: Subrayado (ej: DNI para "cliente").
+ 
+# Ejemplo de Diagrama Entidad-Relación (ER)
 
+## Estructura básica
+```mermaid
+erDiagram
+    /* Entidades (Rectángulos) */
+    CLIENTE ||--o{ PEDIDO : "realiza"
+    CLIENTE {
+        string DNI PK  /* Atributo identificador (subrayado) */
+        string nombre
+        string dirección
+    }
+    
+    PEDIDO {
+        int id_Pedido PK
+        date fecha
+    }
+
+    /* Relación (Línea con verbo) */
+    PRODUCTO ||--|{ PEDIDO : "incluye"
+    PRODUCTO {
+        int codigo PK
+        string descripción
+        float precio
+    }
+```
 ---
 
 ## Pasos para el Diseño Conceptual
