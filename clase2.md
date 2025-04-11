@@ -68,7 +68,6 @@ erDiagram
         string descripción
         float precio
     }
-```
 ---
 
 ## Pasos para el Diseño Conceptual
