@@ -1,4 +1,4 @@
-```erDiagram
+erDiagram
     CLIENTE ||--o{ AUTOMOVIL : adquiere
     CLIENTE {
         string DNI PK
@@ -18,4 +18,3 @@
     %% Cardinalities
     note right of CLIENTE: "1 Cliente can acquire 1 or more Automoviles (1:N)"
     note left of AUTOMOVIL: "1 Automovil is acquired by exactly 1 Cliente (1:1)"
-```
