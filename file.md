@@ -1,6 +1,5 @@
 ```mermaid
 erDiagram
-    VEHICULO ||--o{ CLIENTE : compra
     VEHICULO {
         VARCHAR matricula PK
         VARCHAR marca
@@ -16,9 +15,19 @@ erDiagram
         VARCHAR numero_telefono
         INT codigo_interno
     }
-    REVISION ||--|{ VEHICULO : revisa
     REVISION {
         INT codigo_unico PK
         DATE fecha
         BOOLEAN cambio_filtro_aceite
+    }
+
+    VEHICULO -- compra -- CLIENTE
+    VEHICULO -- revisa -- REVISION
+
+    compra {
+        o--o{
+    }
+
+    revisa {
+        ||--|{
     }
